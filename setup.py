@@ -8,10 +8,11 @@ AUTHOR_EMAIL_ID = "jhav7662@gmail.com"
 REQUIREMENTS_FILE_NAME = 'requirements.txt'
 
 
-def get_requirements(file_path:str = REQUIREMENTS_FILE_NAME)->list(str):
+def get_requirements(file_path= REQUIREMENTS_FILE_NAME)->list(str):
     requirements =[]
     with open(file_path) as file_obj:
         requirements = file_obj.readlines()
+        
     return requirements
 
 setup(name=NAME,
