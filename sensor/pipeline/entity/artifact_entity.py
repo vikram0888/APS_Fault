@@ -1,0 +1,3 @@
+class  DataIngestionArtifact:..
+
+class DataValidationArtifact :..
