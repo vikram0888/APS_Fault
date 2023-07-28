@@ -23,7 +23,7 @@ version=VERSION,
 author=AUTHOR,
 author_email=AUTHOR_EMAIL_ID,
 packages=find_packages(),
-install_requires= get_requirements()
+install_requires=get_requirements(),
 
 )
 
