@@ -1,30 +1,23 @@
 from setuptools import find_packages,setup
 from typing import List
 
-NAME = "sensor"
-VERSION = "0.0.1"
-AUTHOR = "vikram jha"
-AUTHOR_EMAIL_ID = "jhav7662@gmail.com"
-REQUIREMENTS_FILE_NAME = 'requirements.txt'
-HYPHEN_E_DOT="-e ."
+def get_requirements()->List[str]:
+    """
+    This function will return list of requirements
+    """
+    requirement_list:List[str] = []
 
-def get_requirements(file_path:str= REQUIREMENTS_FILE_NAME)->List[str]:
-    requirements =[]
-    with open(file_path) as file_obj:
-        requirements = file_obj.readlines()
-        #remove '/n' which represent new line internally
-        requirements=[req.replace("\n", "")for req in requirements]
-    if HYPHEN_E_DOT in requirements:
-        requirements.remove(HYPHEN_E_DOT)    
-    return requirements
+    """
+    Write a code to read requirements.txt file and append each requirements in requirement_list variable.
+    """
+    return requirement_list
 
-setup(name=NAME,
-version=VERSION,
-author=AUTHOR,
-author_email=AUTHOR_EMAIL_ID,
-packages=find_packages(),
-install_requires=get_requirements(),
-
+setup(
+    name="sensor",
+    version="0.0.1",
+    author="vikram",
+    author_email="jhav7662@gmail.com",
+    packages = find_packages(),
+    install_requires=get_requirements(),#["pymongo==4.2.0"],
 )
-
 
